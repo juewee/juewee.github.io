@@ -7,7 +7,13 @@
  			html, body {
  				height: 100%;
  				width: 100%;
+				margin: 0;
+				padding: 0;
  			}
+			body{
+				background-image: url(https://w.wallhaven.cc/full/9d/wallhaven-9dz1e8.jpg);
+				background-size: 100%;
+			}
  			#main{
  				
  				height:100%;
@@ -24,8 +30,21 @@
  				border-radius: 15px;
  				border: 3px solid blue;
  				overflow: hidden;		
- 				background-color: rgba(128, 128, 128, 0.2);		
+ 				background-color: rgba(128, 128, 128, 0.2);	
+				transition: background-color 0.3s ease-out;	
  			}
+			#input:hover{
+				background-color: white;
+				box-shadow:
+  3.1px 3px 5.8px rgba(0, 0, 0, 0.107),
+  7.2px 6.9px 13.5px rgba(0, 0, 0, 0.145),
+  13px 12.4px 24.2px rgba(0, 0, 0, 0.17),
+  21.5px 20.6px 40.1px rgba(0, 0, 0, 0.189),
+  35.4px 33.9px 66.1px rgba(0, 0, 0, 0.208),
+  62px 59.2px 115.6px rgba(0, 0, 0, 0.23),
+  134px 128px 250px rgba(0, 0, 0, 0.26)
+;
+			}
  			input{
  				padding-left: 10px;
  				background: none;
@@ -47,18 +66,77 @@
  				top: -8px;
  				left: 92%;
  			}
+			#sheep{
+				width: 35px;
+
+			}
+			#header_left{
+				display: inline-block;
+			}
+			nav{
+				display: inline-block;
+			}
+			.h_a{
+				border-radius: 15px 15px 0px 0px;
+				margin: 0px 10px;
+				padding: 15px 15px 0px 15px;
+				text-decoration: none;
+				color: white;
+				transition: background-color 0.3s ease-out;	
+			}
+			.h_a:hover{
+				background-color: white;
+				color: black;
+			
+			}
+			header{
+				padding: 10px 30px 10px 30px;
+			}
+			ul{
+				display: none;
+				position: absolute;
+				left: 136px;
+				
+			}
+			#ai:hover ul{
+				display: block;
+			}
+			li{
+				list-style: none;
+				background-color:white;
+				padding: 15px;
+			}
  		</style>
  	</head>
  	<body>
  		<div id="main">
+			<header>
+				<div id="header_left">
+					<img src="img/sheep.png" alt="" id="sheep">
+				</div>
+				<nav>
+					<a href="#" class="h_a">主页</a>
+					<a href="#" class="h_a" id="ai">ai收藏
+						<ul>
+							<li>ai_1</li>
+							<li>ai_2</li>
+							<li>ai_3</li>
+						</ul>
+							
+					</a>
+					<a href="https://wallhaven.cc/" class="h_a">图库</a>
+					<a href="#" class="h_a">工具箱</a>
+					<a href="#" class="h_a">友情链接</a>
+				</nav>
+			</header>
  			<div id="logo">
  				<img src="img/losheep.png" alt="">
  			</div>
  			<div id="input">
- 				<img src="img/search.png" alt="搜索" id="search">
+ 				<a href="#"><img src="img/search.png" alt="搜索" id="search"></a>
  				<input type="text">
  			</div>
- 		</div>iv
+ 		</div>
  	</body>
  </html>
  
