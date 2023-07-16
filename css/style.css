@@ -126,7 +126,7 @@ label{
   }
   
   #dg {
-	background-image: url(img/月亮.png);
+	background-image: url(../img/月亮.png);
 	background-size: 100%;
 	width: 50px;
 	height: 50px;
