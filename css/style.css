@@ -1,41 +1,235 @@
-* {
-    margin: 0;
-    padding: 0;
+
+
+*{
+	padding: 0;
+	margin: 0;
+}
+html{
+	background-image: url(https://w.wallhaven.cc/full/gp/wallhaven-gp9dkd.png);
+	background-attachment: fixed;
+	background-size: 100%;
+	transition: background-image 0.3s ease-in-out;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+#header{
+	margin-top:-350px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+#nav{
+	height: 1000px;
+}
+#lead_filed{
+	margin-top: 50px;
+}
+#lead{
+	position: fixed;
+	top: 0;
+	margin: auto;
+	height: 50px;
+	width: 95%;
+	color: white;
+	padding-left: 50px;
+	line-height: 50px;
+	padding-right: 50px;
+	background-color: rgba(0,0,0,0.2);
+	transition: top 0.3s ease-in-out;
+
+}
+#losheep{
+	font-size: 25px;
+}
+ul{
+	float: right;
+	list-style-type: none;
+}
+#lead li{
+/* 		float: left; */
+	display: inline-block;
+	margin-left: 15px;
+	position: relative;
+}
+#lead a{
+	height: auto;
+	width: auto;
+	text-decoration: none;
+	color: white;
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
+#lead a::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;/*靠最左边开始*/
+	border-bottom: 3px solid #009688;/*设置底部边颜色*/
+	width: 0;/*宽度为0，这里的宽度是相对与li的宽度*/
+	height: 80%;/*设置高度使它和li等高*/
+}
+#lead a:hover::before{/*鼠标hover，状态发生改变*/
+	width: 100%;
+	transition: 0.1s all linear;/*设置过度时间*/
+	transition-delay: 0.05s;/*过度延时*/
+}
+#logo{
+	background: url(https://s1.ax1x.com/2023/05/25/p9b96Cd.png) no-repeat -50px -25px;
+	background-size: 200%;
+	width: 100px;
+	height: 100px;
+	margin: auto;
+	border-radius: 50%;
+	margin-top: 250px;
+}
+.logo{
+	width: 100px;
+	margin: auto;
+	
+}
+.find-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 9999;
+}
+.find-popup-inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-600%);
+	background-color: white;
+	padding: 5px;
+	border-radius: 15px;
+}
+label{
+	color: black;
+}
+@keyframes rotate-scale-down-diag-2 {
+	0% {
+	  transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+	}
+	50% {
+	  transform: scale(.5) rotate3d(-1, 1, 0, 180deg);
+	}
+	100% {
+	  transform: scale(1) rotate3d(-1, 1, 0, 360deg);
+	}
+  }
+  
+  .logo:hover .rotate-scale-down-diag-2 {
+	animation: rotate-scale-down-diag-2 .7s;
+  }
+  
+  #dg {
+	background-image: url(img/月亮.png);
+	background-size: 100%;
+	width: 50px;
+	height: 50px;
+	color: black;
+	border-radius: 50%;
+	margin-right: -25px;
+	transition: 0.2s;
+  }
+  
+  #dg:hover {
+	margin-right: 0px;
+  }
+  
+  @keyframes rotate-center {
+	0% {
+	  transform: rotate(0);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+  }
+  
+  .clickable:active {
+	animation: rotate-center .6s ease-in-out both;
+  }
+  
+
+.self-introduction, .additional-info {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 20px;
+	transition: background-color 0.3s;
+	width: 300px;
+	margin-bottom: 20px; /* 新增的样式 */
+	border-radius: 15px;
+	margin: 15px;
+  }
+  .nav_center{
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 20px;
+	transition: background-color 0.3s;
+	width: 500px;
+	margin-bottom: 20px; /* 新增的样式 */
+	border-radius: 15px;
+	margin: 15px;
+  }
+
+  .self-introduction:hover, .additional-info:hover {
+	background-color: rgba(0, 0, 0, 0.6);
+  }
+  .nav_center:hover{
+	background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .profile-picture {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	overflow: hidden;
+	object-fit: cover;
+	object-position: center;
+  }
+  
+  .details, .additional-info, .nav_center p {
+	margin-top: 20px;
+  }
+  
+  .profession {
+	font-weight: bold;
+  }
+  
+  .intro {
+	margin-top: 10px;
+  }
+  
+  .contact-info p {
+	margin-bottom: 10px;
+  }
+  
+  .container { /* 新增的样式 */
+	color: white;
+	padding: 20px;
+	display: flex;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+  }
+
+/* 底部容器样式 */
+#footer {
+	backdrop-filter: blur(10px);
+	padding: 20px;
+	text-align: center;
+	font-size: 14px;
+	color: #666;
 }
 
-img {
-    max-height: 60px;
+/* 链接样式 */
+#footer a {
+	color: #333;
+	text-decoration: none;
 }
 
-form {
-    display: flex;
-    align-items: center;
-}
-
-input[type="text"] {
-    border: none;
-    border-radius: 15px;
-    height: 20px;
-    width: 200px;
-    padding: 10px;
-    font-size: larger;
-    outline: none;
-    border:3px solid blue;
-}
-
-button[type="submit"] {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-button[type="submit"]:focus {
-    outline: none;
+/* 链接悬停样式 */
+#footer a:hover {
+	color: #ff0000;
 }
