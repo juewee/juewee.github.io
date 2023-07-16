@@ -22,7 +22,7 @@
 			#header{
 				width: 100%;
 				height: 100%;
-				background-color: rgba(0， 0， 0， 0.5);
+				background-color: rgba(0,0,0,0.5);
 			}
 			#nav{
 				height: 1000px;
@@ -84,14 +84,14 @@
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background-color: rgba(0， 0， 0， 0.5);
+				background-color: rgba(0,0,0,0.5);
 				z-index: 9999;
 			}
 			.find-popup-inner {
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				transform: translate(-50%， -600%);
+				transform: translate(-50%,-600%);
 				background-color: white;
 				padding: 5px;
 				border-radius: 15px;
@@ -129,25 +129,25 @@
 						<svg t="1686326744494" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2401" width="16" height="16"><path d="M475.605333 81.066667a394.538667 394.538667 0 1 0 232.832 713.088l131.029334 131.029333a60.586667 60.586667 0 0 0 85.76-85.717333l-131.072-131.029334A394.538667 394.538667 0 0 0 475.605333 81.066667z m-273.28 394.538666a273.28 273.28 0 1 1 546.56 0 273.28 273.28 0 0 1-546.56 0z" fill="#ffffff" p-id="2402"></path></svg>
 						搜索
 					</a></li>
-					<div class="find-popup" style="display:无;">
+					<div class="find-popup" style="display:none;">
 						<div class="find-popup-inner">
 						  <label>查找:</label>
 						  <input type="text" id="find-input">
 						  <button onclick="findText()">查找下一个</button>
 						  <button onclick="hideFindPopup()">关闭</button>
 						</div>
-					  </div>
+					</div>
 					
 					  <script type="text/javascript">
 						function showFindPopup() {
-						  document.querySelector('.find-popup')。style。display = 'block';
-						  document.querySelector('#find-input')。focus();
+						  document.querySelector('.find-popup').style.display = 'block';
+						  document.querySelector('#find-input').focus();
 						}
 						function hideFindPopup() {
-						  document.querySelector('.find-popup')。style。display = 'none';
+						  document.querySelector('.find-popup').style.display = 'none';
 						}
 						function findText() {
-						  var searchText = document.querySelector('#find-input')。value;
+						  var searchText = document.querySelector('#find-input').value;
 						  if (searchText) {
 							window.find(searchText);
 						  }
@@ -184,16 +184,16 @@
 				function switchBackground() {
 				  var html = document.querySelector('html');
 				  var dg=document.querySelector('#dg');
-				  if (html.style。backgroundImage === 'url("https://w.wallhaven.cc/full/gp/wallhaven-gp9dkd.png")') {
-					html.style。backgroundImage = 'url("https://w.wallhaven.cc/full/28/wallhaven-281d5y.png")';
-					dg.style。backgroundImage = 'url("img/太阳.png")';
+				  if (html.style.backgroundImage === 'url("https://w.wallhaven.cc/full/gp/wallhaven-gp9dkd.png")') {
+					html.style.backgroundImage = 'url("https://w.wallhaven.cc/full/28/wallhaven-281d5y.png")';
+					dg.style.backgroundImage = 'url("img/太阳.png")';
 				  } 
-				  else if(html.style。backgroundImage === 'url("https://w.wallhaven.cc/full/28/wallhaven-281d5y.png")') {
-					html.style。backgroundImage = 'url("https://w.wallhaven.cc/full/we/wallhaven-wely87.png")';
+				  else if(html.style.backgroundImage === 'url("https://w.wallhaven.cc/full/28/wallhaven-281d5y.png")') {
+					html.style.backgroundImage = 'url("https://w.wallhaven.cc/full/we/wallhaven-wely87.png")';
 				  }
 				  else {
-					html.style。backgroundImage = 'url("https://w.wallhaven.cc/full/gp/wallhaven-gp9dkd.png")';
-					dg.style。backgroundImage = 'url("img/月亮.png")';
+					html.style.backgroundImage = 'url("https://w.wallhaven.cc/full/gp/wallhaven-gp9dkd.png")';
+					dg.style.backgroundImage = 'url("img/月亮.png")';
 				  }
 				}
 			</script>
@@ -207,46 +207,46 @@
 			  let longPressed = false;
 			  let longPress;
 			  let multiplier = 0;
-			  let width， height;
+			  let width,height;
 			  let origin;
 			  let normal;
 			  let ctx;
-			  const colours = ["#F73859"， "#14FFEC"， "#00E0FF"， "#FF99FE"， "#FAF15D"];
+			  const colours = ["#F73859","#14FFEC","#00E0FF","#FF99FE","#FAF15D"];
 			  const canvas = document.createElement("canvas");
-			  document.body。appendChild(canvas);
-			  canvas.setAttribute("style"， "width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed; pointer-events: none;");
+			  document.body.appendChild(canvas);
+			  canvas.setAttribute("style","width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed; pointer-events: none;");
 			  const pointer = document.createElement("span");
-			  pointer.classList。add("pointer");
-			  document.body。appendChild(pointer);
+			  pointer.classList.add("pointer");
+			  document.body.appendChild(pointer);
 			 
 			  if (canvas.getContext && window.addEventListener) {
 				ctx = canvas.getContext("2d");
 				updateSize();
 				window.addEventListener('resize', updateSize, false);
 				loop();
-				window.addEventListener("mousedown"， function(e) {
-				  pushBalls(randBetween(10， 20), e.clientX, e.clientY);
-				  document.body。classList。add("is-pressed");
+				window.addEventListener("mousedown",function(e) {
+				  pushBalls(randBetween(10,20), e.clientX, e.clientY);
+				  document.body.classList.add("is-pressed");
 				  longPress = setTimeout(function(){
-					document.body。classList。add("is-longpress");
+					document.body.classList.add("is-longpress");
 					longPressed = true;
-				  }， 500);
-				}， false);
-				window.addEventListener("mouseup"， function(e) {
+				  },500);
+				},false);
+				window.addEventListener("mouseup",function(e) {
 				  clearInterval(longPress);
 				  if (longPressed == true) {
-					document.body。classList。remove("is-longpress");
-					pushBalls(randBetween(50 + Math.ceil(multiplier)， 100 + Math.ceil(multiplier)), e.clientX, e.clientY);
+					document.body.classList.remove("is-longpress");
+					pushBalls(randBetween(50 + Math.ceil(multiplier),100 + Math.ceil(multiplier)), e.clientX, e.clientY);
 					longPressed = false;
 				  }
-				  document.body。classList。remove("is-pressed");
-				}， false);
-				window.addEventListener("mousemove"， function(e) {
+				  document.body.classList.remove("is-pressed");
+				},false);
+				window.addEventListener("mousemove",function(e) {
 				  let x = e.clientX;
 				  let y = e.clientY;
-				  pointer.style。top = y + "px";
-				  pointer.style。left = x + "px";
-				}， false);
+				  pointer.style.top = y + "px";
+				  pointer.style.left = x + "px";
+				},false);
 			  } else {
 				console.log("canvas or addEventListener is unsupported!");
 			  }
@@ -255,66 +255,66 @@
 			  function updateSize() {
 				canvas.width = window.innerWidth * 2;
 				canvas.height = window.innerHeight * 2;
-				canvas.style。width = window.innerWidth + 'px';
-				canvas.style。height = window.innerHeight + 'px';
-				ctx.scale(2， 2);
+				canvas.style.width = window.innerWidth + 'px';
+				canvas.style.height = window.innerHeight + 'px';
+				ctx.scale(2,2);
 				width = (canvas.width = window.innerWidth);
 				height = (canvas.height = window.innerHeight);
 				origin = {
-				  x: width / 2，
+				  x: width / 2,
 				  y: height / 2
 				};
 				normal = {
-				  x: width / 2，
+				  x: width / 2,
 				  y: height / 2
 				};
 			  }
 			  class Ball {
-				constructor(x = origin.x， y = origin.y) {
-						this。x = x;
-						this。y = y;
-						this。angle = Math.PI * 2 * Math.random();
+				constructor(x = origin.x,y = origin.y) {
+						this.x = x;
+						this.y = y;
+						this.angle = Math.PI * 2 * Math.random();
 						if (longPressed == true) {
-							this。multiplier = randBetween(14 + multiplier, 15 + multiplier);
+							this.multiplier = randBetween(14 + multiplier, 15 + multiplier);
 						} else {
-							this。multiplier = randBetween(6， 12);
+							this.multiplier = randBetween(6,12);
 						}
-						this。vx = (this。multiplier + Math.random() * 0.5) * Math.cos(this。angle);
-						this。vy = (this。multiplier + Math.random() * 0.5) * Math.sin(this。angle);
-						this。r = randBetween(5， 5) + 3 * Math.random();//在这里设置半径的初值
-						this。color = colours[Math.floor(Math.random() * colours.length)];
+						this.vx = (this.multiplier + Math.random() * 0.5) * Math.cos(this.angle);
+						this.vy = (this.multiplier + Math.random() * 0.5) * Math.sin(this.angle);
+						this.r = randBetween(5,5) + 3 * Math.random();//在这里设置半径的初值
+						this.color = colours[Math.floor(Math.random() * colours.length)];
 					}
 
 					update() {
-						this。x += this。vx - normal.x;
-						this。y += this。vy - normal.y;
-						normal.x = -2 / window.innerWidth * Math.sin(this。angle);
-						normal.y = -2 / window.innerHeight * Math.cos(this。angle);
-						this。r -= 0.2;//在这里修改半径的值
-						this。vx *= 0.9;
-						this。vy *= 0.9;
+						this.x += this.vx - normal.x;
+						this.y += this.vy - normal.y;
+						normal.x = -2 / window.innerWidth * Math.sin(this.angle);
+						normal.y = -2 / window.innerHeight * Math.cos(this.angle);
+						this.r -= 0.2;//在这里修改半径的值
+						this.vx *= 0.9;
+						this.vy *= 0.9;
 					}
 			  	}
 			 
-			  function pushBalls(count = 1， x = origin.x， y = origin.y) {
+			  function pushBalls(count = 1,x = origin.x,y = origin.y) {
 				for (let i = 0; i < count; i++) {
 				  balls.push(new Ball(x, y));
 				}
 			  }
 			 
-			  function randBetween(min， max) {
+			  function randBetween(min,max) {
 				return Math.floor(Math.random() * max) + min;
 			  }
 			 
 			  function loop() {
 				ctx.fillStyle = "rgba(255, 255, 255, 0)";
-				ctx.clearRect(0， 0, canvas.width, canvas.height);
+				ctx.clearRect(0,0, canvas.width, canvas.height);
 				for (let i = 0; i < balls.length; i++) {
 				  let b = balls[i];
 				  if (b.r < 0) continue;
 				  ctx.fillStyle = b.color;
 				  ctx.beginPath();
-				  ctx.arc(b.x, b.y, b.r， 0, Math.PI * 2， false);
+				  ctx.arc(b.x, b.y, b.r,0, Math.PI * 2,false);
 				  ctx.fill();
 				  b.update();
 				}
