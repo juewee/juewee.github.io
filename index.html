@@ -3,177 +3,82 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
-		
-		<style type="text/css">
-			*{
-				padding: 0;
-				margin: 0;
-			}
-			html{
-				background-image: url(https://w.wallhaven.cc/full/gp/wallhaven-gp9dkd.png);
-				background-attachment: fixed;
-				background-size: 100%;
-				transition: background-image 0.3s ease-in-out;
-			}
-			html,body{
-				width: 100%;
-				height: 100%;
-			}
-			#header{
-				width: 100%;
-				height: 100%;
-				background-color: rgba(0,0,0,0.5);
-			}
-			#nav{
-				height: 1000px;
-			}
-			#lead{
-				height: 50px;
-				color: white;
-				padding-left: 50px;
-				line-height: 50px;
-				padding-right: 50px;
-
-			}
-			#losheep{
-				font-size: 25px;
-			}
-			ul{
-				float: right;
-				list-style-type: 无;
-			}
-			#lead li{
-		/* 		float: left; */
-				display: inline-block;
-				margin-left: 15px;
-				position: relative;
-			}
-			#lead a{
-				height: auto;
-				width: auto;
-				text-decoration: 无;
-				color: white;
-			}
-			
-			#lead a::before{
-				content: "";
-				position: absolute;
-				top: 0;
-				left: 0;/*靠最左边开始*/
-				border-bottom: 3px solid #009688;/*设置底部边颜色*/
-				width: 0;/*宽度为0，这里的宽度是相对与li的宽度*/
-				height: 80%;/*设置高度使它和li等高*/
-       	 	}
-			#lead a:hover::before{/*鼠标hover，状态发生改变*/
-				width: 100%;
-				transition: 0.1s all linear;/*设置过度时间*/
-				transition-delay: 0.05s;/*过度延时*/
-        	}
-			#logo{
-				background: url(https://s1.ax1x.com/2023/05/25/p9b96Cd.png) no-repeat -50px -25px;
-				background-size: 200%;
-				width: 100px;
-				height: 100px;
-				margin: auto;
-				border-radius: 50%;
-				margin-top: 250px;
-			}
-			.find-popup {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background-color: rgba(0,0,0,0.5);
-				z-index: 9999;
-			}
-			.find-popup-inner {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%,-600%);
-				background-color: white;
-				padding: 5px;
-				border-radius: 15px;
-			}
-			label{
-				color: black;
-			}
-			@keyframes rotate-scale-down-diag-2{0%{transform:scale(1) rotate3d(-1，1，0，0deg)}50%{transform:scale(.5) rotate3d(-1，1，0，180deg)}100%{transform:scale(1) rotate3d(-1，1，0，360deg)}}
-			.rotate-scale-down-diag-2:hover{animation:rotate-scale-down-diag-2 .7s}
-			#dg{
-				background-image: url(img/月亮.png);
-				background-size: 100%;
-				width: 50px;
-				height: 50px;
-				color: black;
-				border-radius: 50%;
-				margin-right: -25px;
-				transition: 0.2s;
-			}
-			#dg:hover{
-				margin-right: 0px;
-			}
-			@keyframes rotate-center{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
-			.clickable:active{
-				animation:rotate-center .6s ease-in-out both;
-			}
-		</style>
+  <link rel="stylesheet" href="./css/style.css">
 	</head>
 	<body>
+    <div id="lead_filed">
+
+    </div>
+    <div id="lead">
+      <strong id="losheep">losheep</strong>
+      <ul>
+        <li><a href="#" id="search" onclick="showFindPopup()">
+          <svg t="1686326744494" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2401" width="16" height="16"><path d="M475.605333 81.066667a394.538667 394.538667 0 1 0 232.832 713.088l131.029334 131.029333a60.586667 60.586667 0 0 0 85.76-85.717333l-131.072-131.029334A394.538667 394.538667 0 0 0 475.605333 81.066667z m-273.28 394.538666a273.28 273.28 0 1 1 546.56 0 273.28 273.28 0 0 1-546.56 0z" fill="#ffffff" p-id="2402"></path></svg>
+          搜索
+        </a></li>
+        <div class="find-popup" style="display:none;">
+          <div class="find-popup-inner">
+            <label>查找:</label>
+            <input type="text" id="find-input">
+            <button onclick="findText()">查找下一个</button>
+            <button onclick="hideFindPopup()">关闭</button>
+          </div>
+        </div>
+        
+          <script type="text/javascript">
+          function showFindPopup() {
+            document.querySelector('.find-popup').style.display = 'block';
+            document.querySelector('#find-input').focus();
+          }
+          function hideFindPopup() {
+            document.querySelector('.find-popup').style.display = 'none';
+          }
+          function findText() {
+            var searchText = document.querySelector('#find-input').value;
+            if (searchText) {
+            window.find(searchText);
+            }
+          }
+        </script>
+        <li><a href="index.html">
+          <svg t="1686325422265" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="67438" width="16" height="16"><path d="M837.8 389.8V104.7H674.9v122.2L512 64 64 512h81.5v448h244.4V593.5h244.4V960h244.4V512H960L837.8 389.8z" fill="#ffffff" p-id="67439"  ></path></svg>
+          首页
+        </a></li>
+        <li><a href="#container">
+          <svg t="1686326831335" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3612" width="16" height="16"><path d="M298.7 221.8c-29.4 0-53.3 23.9-53.3 53.3v524.7c0 29.4 23.9 53.3 53.3 53.3h426.7c29.4 0 53.3-23.9 53.3-53.3V275.1c0-29.4-23.9-53.3-53.3-53.3h-64v-64h64c64.8 0 117.3 52.5 117.3 117.3v524.7c0 64.8-52.5 117.3-117.3 117.3H298.7c-64.8 0-117.3-52.5-117.3-117.3V275.1c0-64.8 52.5-117.3 117.3-117.3h64v64h-64z" fill="#ffffff" p-id="3613"></path><path d="M640 106.9H384c-23.6 0-42.7 19.1-42.7 42.7v85.3c0 23.6 19.1 42.7 42.7 42.7h256c23.6 0 42.7-19.1 42.7-42.7v-85.3c0-23.6-19.1-42.7-42.7-42.7z m-21.3 106.6H405.3v-42.7h213.3v42.7zM341.3 473.1c0-17.7 14.3-32 32-32h277.3c17.7 0 32 14.3 32 32s-14.3 32-32 32H373.3c-17.6 0-32-14.3-32-32zM341.3 643.8c0-17.7 14.3-32 32-32h217.3c17.7 0 32 14.3 32 32s-14.3 32-32 32H373.3c-17.6 0-32-14.3-32-32z" fill="#ffffff" p-id="3614"></path></svg>
+          日常
+        </a></li>
+        <li><a href="https://github.com/juewee" target="_blank">
+          <svg t="1686326912030" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4868" width="16" height="16"><path d="M576 288h-128v448h256V288h-64v160a32 32 0 0 1-64 0V288z m-192 0h-64v448h64V288zM288 224h448a32 32 0 0 1 32 32v512a32 32 0 0 1-32 32H288a32 32 0 0 1-32-32V256a32 32 0 0 1 32-32z" fill="#ffffff" p-id="4869"></path></svg>
+          笔记
+        </a></li>
+        <li><a href="https://c.binjie.fun" target="_blank">
+          <svg t="1686326939498" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5928" width="16" height="16"><path d="M607.934444 417.856853c-6.179746-6.1777-12.766768-11.746532-19.554358-16.910135l-0.01228 0.011256c-6.986111-6.719028-16.47216-10.857279-26.930349-10.857279-21.464871 0-38.864146 17.400299-38.864146 38.864146 0 9.497305 3.411703 18.196431 9.071609 24.947182l-0.001023 0c0.001023 0.001023 0.00307 0.00307 0.005117 0.004093 2.718925 3.242857 5.953595 6.03853 9.585309 8.251941 3.664459 3.021823 7.261381 5.997598 10.624988 9.361205l3.203972 3.204995c40.279379 40.229237 28.254507 109.539812-12.024871 149.820214L371.157763 796.383956c-40.278355 40.229237-105.761766 40.229237-146.042167 0l-3.229554-3.231601c-40.281425-40.278355-40.281425-105.809861 0-145.991002l75.93546-75.909877c9.742898-7.733125 15.997346-19.668968 15.997346-33.072233 0-23.312962-18.898419-42.211381-42.211381-42.211381-8.797363 0-16.963347 2.693342-23.725354 7.297197-0.021489-0.045025-0.044002-0.088004-0.066515-0.134053l-0.809435 0.757247c-2.989077 2.148943-5.691629 4.669346-8.025791 7.510044l-78.913281 73.841775c-74.178443 74.229608-74.178443 195.632609 0 269.758863l3.203972 3.202948c74.178443 74.127278 195.529255 74.127278 269.707698 0l171.829484-171.880649c74.076112-74.17435 80.357166-191.184297 6.282077-265.311575L607.934444 417.856853z" fill="#ffffff" p-id="5929"></path><path d="M855.61957 165.804257l-3.203972-3.203972c-74.17742-74.178443-195.528232-74.178443-269.706675 0L410.87944 334.479911c-74.178443 74.178443-78.263481 181.296089-4.085038 255.522628l3.152806 3.104711c3.368724 3.367701 6.865361 6.54302 10.434653 9.588379 2.583848 2.885723 5.618974 5.355985 8.992815 7.309476 0.025583 0.020466 0.052189 0.041956 0.077771 0.062422l0.011256-0.010233c5.377474 3.092431 11.608386 4.870938 18.257829 4.870938 20.263509 0 36.68962-16.428158 36.68962-36.68962 0-5.719258-1.309832-11.132548-3.645017-15.95846l0 0c-4.850471-10.891048-13.930267-17.521049-20.210297-23.802102l-3.15383-3.102664c-40.278355-40.278355-24.982998-98.79612 15.295358-139.074476l171.930791-171.830507c40.179095-40.280402 105.685018-40.280402 145.965419 0l3.206018 3.152806c40.279379 40.281425 40.279379 105.838513 0 146.06775l-75.686796 75.737962c-10.296507 7.628748-16.97358 19.865443-16.97358 33.662681 0 23.12365 18.745946 41.87062 41.87062 41.87062 8.048303 0 15.563464-2.275833 21.944801-6.211469 0.048095 0.081864 0.093121 0.157589 0.141216 0.240477l1.173732-1.083681c3.616364-2.421142 6.828522-5.393847 9.529027-8.792247l79.766718-73.603345C929.798013 361.334535 929.798013 239.981676 855.61957 165.804257z" fill="#ffffff" p-id="5930"></path></svg>
+          友情链接
+        </a></li>
+      </ul>
+    </div>
+    <script>
+    var navbar = document.getElementById("lead");
+    var prevScrollpos = window.pageYOffset;
+
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+
+      if (prevScrollpos > currentScrollPos) {
+        navbar.style.top = "0";
+      } else {
+        navbar.style.top = "-50px";
+      }
+
+      prevScrollpos = currentScrollPos;
+    }
+    </script>
+    <div class="logo"><div id="logo" class="rotate-scale-down-diag-2"> </div></div>
 		<div id="header">
-			<div id="lead">
-				<strong id="losheep">losheep</strong>
-				<ul>
-					<li><a href="#" id="search" onclick="showFindPopup()">
-						<svg t="1686326744494" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2401" width="16" height="16"><path d="M475.605333 81.066667a394.538667 394.538667 0 1 0 232.832 713.088l131.029334 131.029333a60.586667 60.586667 0 0 0 85.76-85.717333l-131.072-131.029334A394.538667 394.538667 0 0 0 475.605333 81.066667z m-273.28 394.538666a273.28 273.28 0 1 1 546.56 0 273.28 273.28 0 0 1-546.56 0z" fill="#ffffff" p-id="2402"></path></svg>
-						搜索
-					</a></li>
-					<div class="find-popup" style="display:none;">
-						<div class="find-popup-inner">
-						  <label>查找:</label>
-						  <input type="text" id="find-input">
-						  <button onclick="findText()">查找下一个</button>
-						  <button onclick="hideFindPopup()">关闭</button>
-						</div>
-					</div>
-					
-					  <script type="text/javascript">
-						function showFindPopup() {
-						  document.querySelector('.find-popup').style.display = 'block';
-						  document.querySelector('#find-input').focus();
-						}
-						function hideFindPopup() {
-						  document.querySelector('.find-popup').style.display = 'none';
-						}
-						function findText() {
-						  var searchText = document.querySelector('#find-input').value;
-						  if (searchText) {
-							window.find(searchText);
-						  }
-						}
-					</script>
-					<li><a href="index.html">
-						<svg t="1686325422265" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="67438" width="16" height="16"><path d="M837.8 389.8V104.7H674.9v122.2L512 64 64 512h81.5v448h244.4V593.5h244.4V960h244.4V512H960L837.8 389.8z" fill="#ffffff" p-id="67439"  ></path></svg>
-						首页
-					</a></li>
-					<li><a href="#">
-						<svg t="1686326831335" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3612" width="16" height="16"><path d="M298.7 221.8c-29.4 0-53.3 23.9-53.3 53.3v524.7c0 29.4 23.9 53.3 53.3 53.3h426.7c29.4 0 53.3-23.9 53.3-53.3V275.1c0-29.4-23.9-53.3-53.3-53.3h-64v-64h64c64.8 0 117.3 52.5 117.3 117.3v524.7c0 64.8-52.5 117.3-117.3 117.3H298.7c-64.8 0-117.3-52.5-117.3-117.3V275.1c0-64.8 52.5-117.3 117.3-117.3h64v64h-64z" fill="#ffffff" p-id="3613"></path><path d="M640 106.9H384c-23.6 0-42.7 19.1-42.7 42.7v85.3c0 23.6 19.1 42.7 42.7 42.7h256c23.6 0 42.7-19.1 42.7-42.7v-85.3c0-23.6-19.1-42.7-42.7-42.7z m-21.3 106.6H405.3v-42.7h213.3v42.7zM341.3 473.1c0-17.7 14.3-32 32-32h277.3c17.7 0 32 14.3 32 32s-14.3 32-32 32H373.3c-17.6 0-32-14.3-32-32zM341.3 643.8c0-17.7 14.3-32 32-32h217.3c17.7 0 32 14.3 32 32s-14.3 32-32 32H373.3c-17.6 0-32-14.3-32-32z" fill="#ffffff" p-id="3614"></path></svg>
-						日常
-					</a></li>
-					<li><a href="https://github.com/juewee">
-						<svg t="1686326912030" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4868" width="16" height="16"><path d="M576 288h-128v448h256V288h-64v160a32 32 0 0 1-64 0V288z m-192 0h-64v448h64V288zM288 224h448a32 32 0 0 1 32 32v512a32 32 0 0 1-32 32H288a32 32 0 0 1-32-32V256a32 32 0 0 1 32-32z" fill="#ffffff" p-id="4869"></path></svg>
-						笔记
-					</a></li>
-					<li><a href="https://c.binjie.fun">
-						<svg t="1686326939498" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5928" width="16" height="16"><path d="M607.934444 417.856853c-6.179746-6.1777-12.766768-11.746532-19.554358-16.910135l-0.01228 0.011256c-6.986111-6.719028-16.47216-10.857279-26.930349-10.857279-21.464871 0-38.864146 17.400299-38.864146 38.864146 0 9.497305 3.411703 18.196431 9.071609 24.947182l-0.001023 0c0.001023 0.001023 0.00307 0.00307 0.005117 0.004093 2.718925 3.242857 5.953595 6.03853 9.585309 8.251941 3.664459 3.021823 7.261381 5.997598 10.624988 9.361205l3.203972 3.204995c40.279379 40.229237 28.254507 109.539812-12.024871 149.820214L371.157763 796.383956c-40.278355 40.229237-105.761766 40.229237-146.042167 0l-3.229554-3.231601c-40.281425-40.278355-40.281425-105.809861 0-145.991002l75.93546-75.909877c9.742898-7.733125 15.997346-19.668968 15.997346-33.072233 0-23.312962-18.898419-42.211381-42.211381-42.211381-8.797363 0-16.963347 2.693342-23.725354 7.297197-0.021489-0.045025-0.044002-0.088004-0.066515-0.134053l-0.809435 0.757247c-2.989077 2.148943-5.691629 4.669346-8.025791 7.510044l-78.913281 73.841775c-74.178443 74.229608-74.178443 195.632609 0 269.758863l3.203972 3.202948c74.178443 74.127278 195.529255 74.127278 269.707698 0l171.829484-171.880649c74.076112-74.17435 80.357166-191.184297 6.282077-265.311575L607.934444 417.856853z" fill="#ffffff" p-id="5929"></path><path d="M855.61957 165.804257l-3.203972-3.203972c-74.17742-74.178443-195.528232-74.178443-269.706675 0L410.87944 334.479911c-74.178443 74.178443-78.263481 181.296089-4.085038 255.522628l3.152806 3.104711c3.368724 3.367701 6.865361 6.54302 10.434653 9.588379 2.583848 2.885723 5.618974 5.355985 8.992815 7.309476 0.025583 0.020466 0.052189 0.041956 0.077771 0.062422l0.011256-0.010233c5.377474 3.092431 11.608386 4.870938 18.257829 4.870938 20.263509 0 36.68962-16.428158 36.68962-36.68962 0-5.719258-1.309832-11.132548-3.645017-15.95846l0 0c-4.850471-10.891048-13.930267-17.521049-20.210297-23.802102l-3.15383-3.102664c-40.278355-40.278355-24.982998-98.79612 15.295358-139.074476l171.930791-171.830507c40.179095-40.280402 105.685018-40.280402 145.965419 0l3.206018 3.152806c40.279379 40.281425 40.279379 105.838513 0 146.06775l-75.686796 75.737962c-10.296507 7.628748-16.97358 19.865443-16.97358 33.662681 0 23.12365 18.745946 41.87062 41.87062 41.87062 8.048303 0 15.563464-2.275833 21.944801-6.211469 0.048095 0.081864 0.093121 0.157589 0.141216 0.240477l1.173732-1.083681c3.616364-2.421142 6.828522-5.393847 9.529027-8.792247l79.766718-73.603345C929.798013 361.334535 929.798013 239.981676 855.61957 165.804257z" fill="#ffffff" p-id="5930"></path></svg>
-						友情链接
-					</a></li>
-				</ul>
-			</div>
-			<div id="logo" class="rotate-scale-down-diag-2"> </div>
+
 		</div>
-		
+
 		<div id="nav">
 			<div id="dg" class="clickable" onclick="switchBackground()" style="z-index: 9999; position: fixed ! important; right: 0px; top: 500px;">
 				<table width=""100% style="position: absolute; width:260px; right: 0px; top: 0px;">
@@ -197,9 +102,39 @@
 				  }
 				}
 			</script>
-		</div>
+      <div class="container" id="container">
+        <div class="self-introduction">
+          <img src="https://s1.ax1x.com/2023/05/25/p9b96Cd.png" alt="个人头像" class="profile-picture">
+          <div class="details">
+            <h2>罗俊伟</h2>
+            <p class="profession">全栈工程师</p>
+            <p class="intro">您好！我是juewee，一名热衷于前端开发的工程师。我熟悉 HTML、CSS 和 JavaScript 技术，并具备丰富的实践经验。我对用户体验和界面设计有深入的理解，善于将创意转化为可操作的代码。</p>
+            <div class="contact-info">
+              <p>Email: 2651237933@qq.com</p>
+              <p>手机: 19874230217</p>
+              <p>社交媒体: <a href="mailto:2651237933@qq.com">qq邮箱</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="nav_center">
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+        </div>
+        <div class="additional-info">
+          <h3>更多信息</h3>
+          <p>兴趣爱好: 阅读、旅行、摄影</p>
+          <p>教育背景: XX大学 计算机科学学士学位</p>
+          <!-- 添加更多自定义内容... -->
+        </div>
+      </div>
 		<div id="footer">
-
+      <p>欢迎再次光临</p>
+      <p>thank you very much</p>
+      <p>© 2023 losheep. 版权所有.</p>
+      <p>联系我: <a href="2651237933@qq.com">2651237933@qq.com</a></p>
 		</div>
 		<script>
 			function clickEffect() {
