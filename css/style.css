@@ -21,7 +21,7 @@ html,body{
 	background-color: rgba(0,0,0,0.5);
 }
 #nav{
-	height: 1000px;
+	height: 800px;
 }
 #lead_filed{
 	margin-top: 50px;
@@ -155,31 +155,26 @@ label{
   
 
 .self-introduction, .additional-info {
-	background-color: rgba(0, 0, 0, 0.5);
-	padding: 20px;
-	transition: background-color 0.3s;
 	width: 300px;
-	margin-bottom: 20px; /* 新增的样式 */
-	border-radius: 15px;
-	margin: 15px;
   }
   .nav_center{
-	background-color: rgba(0, 0, 0, 0.5);
-	padding: 20px;
-	transition: background-color 0.3s;
 	width: 500px;
+
+  }
+
+  .all_nav{
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: background-color 0.3s;
 	margin-bottom: 20px; /* 新增的样式 */
 	border-radius: 15px;
 	margin: 15px;
   }
 
-  .self-introduction:hover, .additional-info:hover {
+  .all_nav:hover{
 	background-color: rgba(0, 0, 0, 0.6);
   }
-  .nav_center:hover{
-	background-color: rgba(0, 0, 0, 0.6);
-  }
-  
+
   .profile-picture {
 	width: 150px;
 	height: 150px;
