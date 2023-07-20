@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Losheep的个人博客</title>
     <link rel="stylesheet" href="./css/style.css">
-
 </head>
 <body style="background-image: url('./img/bg1.png')">
     <div id="top">
@@ -75,34 +74,107 @@
     <div id="lead">
         <strong id="losheep">losheep</strong>
 		<ul>
-			<li><a href="#" id="search" onclick="showFindPopup()">
+			<li><a  id="search" onclick="showFindPopup()">
 			<svg t="1686326744494" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2401" width="16" height="16"><path d="M475.605333 81.066667a394.538667 394.538667 0 1 0 232.832 713.088l131.029334 131.029333a60.586667 60.586667 0 0 0 85.76-85.717333l-131.072-131.029334A394.538667 394.538667 0 0 0 475.605333 81.066667z m-273.28 394.538666a273.28 273.28 0 1 1 546.56 0 273.28 273.28 0 0 1-546.56 0z" fill=var(--text_color) p-id="2402"></path></svg>
 			搜索
 			</a></li>
-			<div class="find-popup" style="display:none;">
-			<div class="find-popup-inner">
-				<label>查找:</label>
-				<input type="text" id="find-input">
-				<button onclick="findText()">查找下一个</button>
-				<button onclick="hideFindPopup()">关闭</button>
-			</div>
-			</div>
+            <div class="find-popup" style="display: none;">
+                <div class="find-popup-inner">
+                    <label for="find-input">查找:</label>
+                    <input type="text" id="find-input">
+                    <button onclick="findNext()">查找下一个</button>
+                    <button onclick="hideFindPopup()">关闭</button>
+                    <button onclick="jumpToTop()">跳转到顶部</button>
+                </div>
+            </div>
 			
-			<script type="text/javascript">
-			function showFindPopup() {
-				document.querySelector('.find-popup').style.display = 'block';
-				document.querySelector('#find-input').focus();
-			}
-			function hideFindPopup() {
-				document.querySelector('.find-popup').style.display = 'none';
-			}
-			function findText() {
-				var searchText = document.querySelector('#find-input').value;
-				if (searchText) {
-				window.find(searchText);
-				}
-			}
-			</script>
+            <script type="text/javascript">
+                var currentIndex = -1;
+                var matches = [];
+        
+                function showFindPopup() {
+                    document.querySelector('.find-popup').style.display = 'block';
+                    document.querySelector('#find-input').focus();
+                }
+        
+                function hideFindPopup() {
+                    document.querySelector('.find-popup').style.display = 'none';
+                    currentIndex = -1;
+                    clearHighlights();
+                }
+        
+                function findNext() {
+                    var searchText = document.querySelector('#find-input').value;
+                    if (searchText) {
+                        clearHighlights();
+                        matches = searchTextMatches(searchText);
+                        if (matches.length > 0) {
+                            currentIndex = (currentIndex + 1) % matches.length;
+                            scrollToMatch(currentIndex);
+                        }
+                    }
+                }
+        
+                function jumpToTop() {
+                    window.scrollTo(0, 0);
+                }
+        
+                function searchTextMatches(searchText) {
+                    var matches = [];
+                    var currentNode = document.body;
+                    searchText = searchText.toLowerCase();
+        
+                    while (currentNode) {
+                        if (currentNode.nodeType === 3) {
+                            var text = currentNode.nodeValue.toLowerCase();
+                            var index = text.indexOf(searchText);
+                            while (index !== -1) {
+                                matches.push({
+                                    node: currentNode,
+                                    index: index
+                                });
+                                index = text.indexOf(searchText, index + 1);
+                            }
+                        }
+        
+                        if (currentNode.nodeType === 1 && currentNode.childNodes.length) {
+                            currentNode = currentNode.childNodes[0];
+                        } else if (currentNode.nextSibling) {
+                            currentNode = currentNode.nextSibling;
+                        } else {
+                            while (currentNode.parentNode && !currentNode.parentNode.nextSibling) {
+                                currentNode = currentNode.parentNode;
+                            }
+                            if (!currentNode.parentNode) {
+                                break;
+                            }
+                            currentNode = currentNode.parentNode.nextSibling;
+                        }
+                    }
+        
+                    return matches;
+                }
+        
+                function scrollToMatch(index) {
+                    var match = matches[index];
+                    var range = document.createRange();
+                    range.setStart(match.node, match.index);
+                    range.setEnd(match.node, match.index + document.querySelector('#find-input').value.length);
+                    var highlight = document.createElement('span');
+                    highlight.classList.add('highlight');
+                    range.surroundContents(highlight);
+                    window.scrollTo(0, highlight.offsetTop - (window.innerHeight / 2));
+                }
+        
+                function clearHighlights() {
+                    var highlights = document.querySelectorAll('.highlight');
+                    highlights.forEach(function (highlight) {
+                        var parent = highlight.parentNode;
+                        highlight.outerHTML = highlight.innerHTML;
+                        parent.normalize();
+                    });
+                }
+            </script>
 			<li><a href="index.html">
 			<svg t="1686325422265" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="67438" width="16" height="16"><path d="M837.8 389.8V104.7H674.9v122.2L512 64 64 512h81.5v448h244.4V593.5h244.4V960h244.4V512H960L837.8 389.8z" fill=var(--text_color) p-id="67439"  ></path></svg>
 			首页
