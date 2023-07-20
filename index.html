@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Losheep的个人博客</title>
-	<link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
-<body>
+<body style="background-image: url('./img/bg1.png')">
     <div id="top">
         <div id="top_logo">
             <div id="filepicture">
@@ -368,14 +369,14 @@
     <script type="text/javascript">
         function switchBackground() {
           var html = document.querySelector('body');
-          if (html.style.backgroundImage === 'url("https://w.wallhaven.cc/full/gp/wallhaven-gp9dkd.png")') {
-            html.style.backgroundImage = 'url("https://w.wallhaven.cc/full/28/wallhaven-281d5y.png")';
+          if (html.style.backgroundImage === 'url("./img/bg1.png")') {
+            html.style.backgroundImage = 'url("./img/bg2.png")';
           } 
-          else if(html.style.backgroundImage === 'url("https://w.wallhaven.cc/full/28/wallhaven-281d5y.png")') {
-            html.style.backgroundImage = 'url("https://w.wallhaven.cc/full/we/wallhaven-wely87.png")';
+          else if(html.style.backgroundImage === 'url("./img/bg2.png")') {
+            html.style.backgroundImage = 'url("./img/bg3.png")';
           }
           else {
-            html.style.backgroundImage = 'url("https://w.wallhaven.cc/full/gp/wallhaven-gp9dkd.png")';
+            html.style.backgroundImage = 'url("./img/bg1.png")';
           }
         }
     </script>
