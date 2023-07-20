@@ -231,3 +231,51 @@ ul{
 	color: var(--text_color);
 	font-weight: bold;
 }
+
+/*查找*/
+.find-popup {
+	position: fixed;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(53, 35, 125, 0.9);
+	border: none;
+	padding: 20px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(8px);
+	border-radius: 10px;
+	z-index: 9999;
+}
+
+.find-popup-inner {
+	display: flex;
+	align-items: center;
+}
+
+.find-popup label {
+	margin-right: 10px;
+	font-size: 14px;
+}
+
+.find-popup input[type="text"] {
+	width: 200px;
+	padding: 5px;
+	font-size: 14px;
+	border: 1px solid rgb(0, 0, 0);
+	background-color: black;
+	margin-right: 10px;
+}
+
+.find-popup button {
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px 10px;
+	font-size: 14px;
+	background-color: #007bff;
+	color: rgb(168, 13, 13);
+	border: none;
+	cursor: pointer;
+}
+.highlight {
+	background-color: yellow;
+}
