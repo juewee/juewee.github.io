@@ -1,230 +1,233 @@
+        *{
+            padding: 0%;
+            margin: 0%;
+            color:var(--text_color)
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+
+        }
+        body{
+            background-image: url(https://w.wallhaven.cc/full/gp/wallhaven-gp9dkd.png);
+            background-size: 100%;
+            background-attachment: fixed;/*背景固定*/
 
 
-*{
-	padding: 0;
-	margin: 0;
-}
-html{
-	background-image: url(https://w.wallhaven.cc/full/gp/wallhaven-gp9dkd.png);
-	background-attachment: fixed;
-	background-size: 100%;
-	transition: background-image 0.3s ease-in-out;
-}
-html,body{
-	width: 100%;
-	height: 100%;
-}
-#header{
-	margin-top:-350px;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,0.5);
-}
-#nav{
-	height: 800px;
-}
-#lead_filed{
-	margin-top: 50px;
-}
-#lead{
-	position: fixed;
-	top: 0;
-	margin: auto;
-	height: 50px;
-	width: 95%;
-	color: white;
-	padding-left: 50px;
-	line-height: 50px;
-	padding-right: 50px;
-	background-color: rgba(0,0,0,0.2);
-	transition: top 0.3s ease-in-out;
+        }
+        
+        :root{
+            --div_bg_color:rgba(0,0,0,0.5);
+            --div_bg_color_hover:rgba(0,0,0,0.6);
+            --text_color:white;
+            --top_bg_volor:rgba(0,0,0,0.5);
+            --lead_bg_color:rgba(0,0,0,0.2);
+            --footer:#666;
+        }
 
-}
-#losheep{
-	font-size: 25px;
-}
-ul{
-	float: right;
-	list-style-type: none;
-}
-#lead li{
-/* 		float: left; */
-	display: inline-block;
-	margin-left: 15px;
-	position: relative;
-}
-#lead a{
-	height: auto;
-	width: auto;
-	text-decoration: none;
-	color: white;
-}
 
-#lead a::before{
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;/*靠最左边开始*/
-	border-bottom: 3px solid #009688;/*设置底部边颜色*/
-	width: 0;/*宽度为0，这里的宽度是相对与li的宽度*/
-	height: 80%;/*设置高度使它和li等高*/
-}
-#lead a:hover::before{/*鼠标hover，状态发生改变*/
-	width: 100%;
-	transition: 0.1s all linear;/*设置过度时间*/
-	transition-delay: 0.05s;/*过度延时*/
-}
-#logo{
-	background: url(https://s1.ax1x.com/2023/05/25/p9b96Cd.png) no-repeat -50px -25px;
-	background-size: 200%;
-	width: 100px;
-	height: 100px;
-	margin: auto;
-	border-radius: 50%;
-	margin-top: 250px;
-}
-.logo{
-	width: 100px;
-	margin: auto;
-	
-}
-.find-popup {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,0.5);
-	z-index: 9999;
-}
-.find-popup-inner {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-600%);
-	background-color: white;
-	padding: 5px;
-	border-radius: 15px;
-}
-label{
-	color: black;
-}
-@keyframes rotate-scale-down-diag-2 {
-	0% {
-	  transform: scale(1) rotate3d(-1, 1, 0, 0deg);
-	}
-	50% {
-	  transform: scale(.5) rotate3d(-1, 1, 0, 180deg);
-	}
-	100% {
-	  transform: scale(1) rotate3d(-1, 1, 0, 360deg);
-	}
-  }
-  
-  .logo:hover .rotate-scale-down-diag-2 {
-	animation: rotate-scale-down-diag-2 .7s;
-  }
-  
-  #dg {
-	background-image: url(../img/月亮.png);
-	background-size: 100%;
-	width: 50px;
-	height: 50px;
-	color: black;
-	border-radius: 50%;
-	margin-right: -25px;
-	transition: 0.2s;
-  }
-  
-  #dg:hover {
-	margin-right: 0px;
-  }
-  
-  @keyframes rotate-center {
-	0% {
-	  transform: rotate(0);
-	}
-	100% {
-	  transform: rotate(360deg);
-	}
-  }
-  
-  .clickable:active {
-	animation: rotate-center .6s ease-in-out both;
-  }
-  
 
-.self-introduction, .additional-info {
-	width: 300px;
-  }
-  .nav_center{
-	width: 500px;
+        /* 隐藏滚动条样式 */
+        ::-webkit-scrollbar {
+            width: 0.1em; /* 设置滚动条宽度为0.1em */
+        }
 
-  }
+        /* 隐藏滚动条轨道样式 */
+        ::-webkit-scrollbar-track {
+            background-color: transparent; /* 设置滚动条轨道背景为透明 */
+        }
 
-  .all_nav{
-	padding: 20px;
-	background-color: rgba(0, 0, 0, 0.5);
-	transition: background-color 0.3s;
-	margin-bottom: 20px; /* 新增的样式 */
-	border-radius: 15px;
-	margin: 15px;
-  }
+        /* 隐藏滚动条滑块样式 */
+        ::-webkit-scrollbar-thumb {
+            background-color: transparent; /* 设置滚动条滑块背景为透明 */
+        }
 
-  .all_nav:hover{
-	background-color: rgba(0, 0, 0, 0.6);
-  }
+        
 
-  .profile-picture {
-	width: 150px;
-	height: 150px;
-	border-radius: 50%;
-	overflow: hidden;
-	object-fit: cover;
-	object-position: center;
-  }
-  
-  .details, .additional-info, .nav_center p {
-	margin-top: 20px;
-  }
-  
-  .profession {
-	font-weight: bold;
-  }
-  
-  .intro {
-	margin-top: 10px;
-  }
-  
-  .contact-info p {
-	margin-bottom: 10px;
-  }
-  
-  .container { /* 新增的样式 */
-	color: white;
-	padding: 20px;
-	display: flex;
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-  }
 
-/* 底部容器样式 */
-#footer {
-	backdrop-filter: blur(10px);
-	padding: 20px;
-	text-align: center;
-	font-size: 14px;
-	color: #666;
-}
 
-/* 链接样式 */
-#footer a {
-	color: #333;
-	text-decoration: none;
-}
+        .black_div{
+            background-color:var(--div_bg_color);
+            border-radius: 15px;
+            padding: 15px;
+            margin: 20px;
+            flex: 1;
+        }
+        .black_div:hover{
+            background-color:var(--div_bg_color_hover);
+        }
+        #top{
+            height: 100%;
+            background-color: var(--top_bg_volor);
+        }
+        #top_logo{
+            position: absolute;
+            top: 25%;
+            left:590px;
+            height: 200px;
+            width: 300px;
+            margin: auto;
+            text-align: center;
+        }
+        #nav{
+            height: 200%;
+            padding: 20px;
+            display: flex;
 
-/* 链接悬停样式 */
-#footer a:hover {
-	color: #ff0000;
-}
+        }
+
+
+
+
+        #footer{
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--footer);
+        }
+
+        #lead{
+            position: fixed;
+            top: 0;
+            margin: auto;
+            height: 50px;
+            width: 95%;
+            padding-left: 50px;
+            line-height: 50px;
+            padding-right: 50px;
+            background-color: var(--lead_bg_color);
+            transition: top 0.3s ease-in-out;
+
+        }
+        #losheep{
+            font-size: 25px;
+        }
+        ul{
+            float: right;
+            list-style-type: none;
+        }
+        #lead li{
+            display: inline-block;
+            margin-left: 15px;
+            position: relative;
+        }
+        #lead a{
+            text-decoration: none;
+        }
+
+        #lead a::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;/*靠最左边开始*/
+            border-bottom: 3px solid #009688;/*设置底部边颜色*/
+            width: 0;/*宽度为0，这里的宽度是相对与li的宽度*/
+            height: 80%;/*设置高度使它和li等高*/
+        }
+        #lead a:hover::before{/*鼠标hover，状态发生改变*/
+            width: 100%;
+            transition: 0.1s all linear;/*设置过度时间*/
+            transition-delay: 0.05s;/*过度延时*/
+        }
+
+        /*nav*/
+        #nav_left{
+            width: 300px;
+            height: 100%;
+        }
+        #nav_left1{
+            text-align: center;
+        }
+        #filepicture{
+            border-radius: 50%;
+            margin: auto;
+            margin-top: 50px;
+            width: 100px; /* 设置容器的宽度 */
+            height: 100px; /* 设置容器的高度 */
+            background-image: url("https://s1.ax1x.com/2023/05/25/p9b96Cd.png"); /* 设置背景图像路径 */
+            background-size: 250%; /* 缩放图像以适应容器 */
+            background-repeat: no-repeat; /* 不重复显示背景图像 */
+            background-position: center center; /* 图像从中间开始显示 */
+            transition: transform 1s ease;
+        }
+        #filepicture:hover{
+            transform: rotate(360deg);
+        }
+        #link{
+            display: flex;
+            width: 100%;
+            bottom: 0;
+        }
+        #link div{
+            flex: 1;
+            margin: 10px;
+        }
+
+        #nav_left3{
+            height: 30%;
+        }
+        #nav_center{
+            width: 500px;
+            flex: 2;
+        }
+        #nav_right{
+            width: 300px;
+        }
+
+        /*图标变蓝*/
+        #link a:hover svg path {
+            fill: rgba(171, 122, 255, 0.573);
+        }
+
+        /*返回顶部图标*/
+        #floatingDiv {
+            width: 50px;
+            height: 50px;
+            background-color: var(--div_bg_color_hover);
+            border-radius: 5px;
+            position: fixed;
+            bottom: 135px;
+            right: -100px;
+            transition: right 0.5s;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text_color);
+            font-weight: bold;
+        }
+
+        #theme_cg {
+            width: 50px;
+            height: 50px;
+            background-color: var(--div_bg_color_hover);
+            border-radius: 5px;
+            position: fixed;
+            bottom: 80px;
+            right: 10px;
+            transition: right 0.5s;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text_color);
+            font-weight: bold;
+        }
+
+        #body_bg {
+            width: 50px;
+            height: 50px;
+            background-color: var(--div_bg_color_hover);
+            border-radius: 5px;
+            position: fixed;
+            bottom: 25px;
+            right: 10px;
+            transition: right 0.5s;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text_color);
+            font-weight: bold;
+        }
