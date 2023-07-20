@@ -1,233 +1,233 @@
-        *{
-            padding: 0%;
-            margin: 0%;
-            color:var(--text_color)
-        }
-        html,body{
-            width: 100%;
-            height: 100%;
+*{
+	padding: 0%;
+	margin: 0%;
+	color:var(--text_color)
+}
+html,body{
+	width: 100%;
+	height: 100%;
 
-        }
-        body{
-            background-image: url(https://w.wallhaven.cc/full/gp/wallhaven-gp9dkd.png);
-            background-size: 100%;
-            background-attachment: fixed;/*背景固定*/
-
-
-        }
-        
-        :root{
-            --div_bg_color:rgba(0,0,0,0.5);
-            --div_bg_color_hover:rgba(0,0,0,0.6);
-            --text_color:white;
-            --top_bg_volor:rgba(0,0,0,0.5);
-            --lead_bg_color:rgba(0,0,0,0.2);
-            --footer:#666;
-        }
+}
+body{
+	background-image: url("../img/bg1.png");
+	background-size: 100%;
+	background-attachment: fixed;/*背景固定*/
 
 
+}
 
-        /* 隐藏滚动条样式 */
-        ::-webkit-scrollbar {
-            width: 0.1em; /* 设置滚动条宽度为0.1em */
-        }
-
-        /* 隐藏滚动条轨道样式 */
-        ::-webkit-scrollbar-track {
-            background-color: transparent; /* 设置滚动条轨道背景为透明 */
-        }
-
-        /* 隐藏滚动条滑块样式 */
-        ::-webkit-scrollbar-thumb {
-            background-color: transparent; /* 设置滚动条滑块背景为透明 */
-        }
-
-        
+:root{
+	--div_bg_color:rgba(0,0,0,0.5);
+	--div_bg_color_hover:rgba(0,0,0,0.6);
+	--text_color:white;
+	--top_bg_volor:rgba(0,0,0,0.5);
+	--lead_bg_color:rgba(0,0,0,0.2);
+	--footer:#666;
+}
 
 
 
-        .black_div{
-            background-color:var(--div_bg_color);
-            border-radius: 15px;
-            padding: 15px;
-            margin: 20px;
-            flex: 1;
-        }
-        .black_div:hover{
-            background-color:var(--div_bg_color_hover);
-        }
-        #top{
-            height: 100%;
-            background-color: var(--top_bg_volor);
-        }
-        #top_logo{
-            position: absolute;
-            top: 25%;
-            left:590px;
-            height: 200px;
-            width: 300px;
-            margin: auto;
-            text-align: center;
-        }
-        #nav{
-            height: 200%;
-            padding: 20px;
-            display: flex;
+/* 隐藏滚动条样式 */
+::-webkit-scrollbar {
+	width: 0.1em; /* 设置滚动条宽度为0.1em */
+}
 
-        }
+/* 隐藏滚动条轨道样式 */
+::-webkit-scrollbar-track {
+	background-color: transparent; /* 设置滚动条轨道背景为透明 */
+}
+
+/* 隐藏滚动条滑块样式 */
+::-webkit-scrollbar-thumb {
+	background-color: transparent; /* 设置滚动条滑块背景为透明 */
+}
 
 
 
 
-        #footer{
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            text-align: center;
-            font-size: 14px;
-            color: var(--footer);
-        }
 
-        #lead{
-            position: fixed;
-            top: 0;
-            margin: auto;
-            height: 50px;
-            width: 95%;
-            padding-left: 50px;
-            line-height: 50px;
-            padding-right: 50px;
-            background-color: var(--lead_bg_color);
-            transition: top 0.3s ease-in-out;
+.black_div{
+	background-color:var(--div_bg_color);
+	border-radius: 15px;
+	padding: 15px;
+	margin: 20px;
+	flex: 1;
+}
+.black_div:hover{
+	background-color:var(--div_bg_color_hover);
+}
+#top{
+	height: 100%;
+	background-color: var(--top_bg_volor);
+}
+#top_logo{
+	position: absolute;
+	top: 25%;
+	left:590px;
+	height: 200px;
+	width: 300px;
+	margin: auto;
+	text-align: center;
+}
+#nav{
+	height: 200%;
+	padding: 20px;
+	display: flex;
 
-        }
-        #losheep{
-            font-size: 25px;
-        }
-        ul{
-            float: right;
-            list-style-type: none;
-        }
-        #lead li{
-            display: inline-block;
-            margin-left: 15px;
-            position: relative;
-        }
-        #lead a{
-            text-decoration: none;
-        }
+}
 
-        #lead a::before{
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;/*靠最左边开始*/
-            border-bottom: 3px solid #009688;/*设置底部边颜色*/
-            width: 0;/*宽度为0，这里的宽度是相对与li的宽度*/
-            height: 80%;/*设置高度使它和li等高*/
-        }
-        #lead a:hover::before{/*鼠标hover，状态发生改变*/
-            width: 100%;
-            transition: 0.1s all linear;/*设置过度时间*/
-            transition-delay: 0.05s;/*过度延时*/
-        }
 
-        /*nav*/
-        #nav_left{
-            width: 300px;
-            height: 100%;
-        }
-        #nav_left1{
-            text-align: center;
-        }
-        #filepicture{
-            border-radius: 50%;
-            margin: auto;
-            margin-top: 50px;
-            width: 100px; /* 设置容器的宽度 */
-            height: 100px; /* 设置容器的高度 */
-            background-image: url("https://s1.ax1x.com/2023/05/25/p9b96Cd.png"); /* 设置背景图像路径 */
-            background-size: 250%; /* 缩放图像以适应容器 */
-            background-repeat: no-repeat; /* 不重复显示背景图像 */
-            background-position: center center; /* 图像从中间开始显示 */
-            transition: transform 1s ease;
-        }
-        #filepicture:hover{
-            transform: rotate(360deg);
-        }
-        #link{
-            display: flex;
-            width: 100%;
-            bottom: 0;
-        }
-        #link div{
-            flex: 1;
-            margin: 10px;
-        }
 
-        #nav_left3{
-            height: 30%;
-        }
-        #nav_center{
-            width: 500px;
-            flex: 2;
-        }
-        #nav_right{
-            width: 300px;
-        }
 
-        /*图标变蓝*/
-        #link a:hover svg path {
-            fill: rgba(171, 122, 255, 0.573);
-        }
+#footer{
+	backdrop-filter: blur(10px);
+	padding: 20px;
+	text-align: center;
+	font-size: 14px;
+	color: var(--footer);
+}
 
-        /*返回顶部图标*/
-        #floatingDiv {
-            width: 50px;
-            height: 50px;
-            background-color: var(--div_bg_color_hover);
-            border-radius: 5px;
-            position: fixed;
-            bottom: 135px;
-            right: -100px;
-            transition: right 0.5s;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--text_color);
-            font-weight: bold;
-        }
+#lead{
+	position: fixed;
+	top: 0;
+	margin: auto;
+	height: 50px;
+	width: 95%;
+	padding-left: 50px;
+	line-height: 50px;
+	padding-right: 50px;
+	background-color: var(--lead_bg_color);
+	transition: top 0.3s ease-in-out;
 
-        #theme_cg {
-            width: 50px;
-            height: 50px;
-            background-color: var(--div_bg_color_hover);
-            border-radius: 5px;
-            position: fixed;
-            bottom: 80px;
-            right: 10px;
-            transition: right 0.5s;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--text_color);
-            font-weight: bold;
-        }
+}
+#losheep{
+	font-size: 25px;
+}
+ul{
+	float: right;
+	list-style-type: none;
+}
+#lead li{
+	display: inline-block;
+	margin-left: 15px;
+	position: relative;
+}
+#lead a{
+	text-decoration: none;
+}
 
-        #body_bg {
-            width: 50px;
-            height: 50px;
-            background-color: var(--div_bg_color_hover);
-            border-radius: 5px;
-            position: fixed;
-            bottom: 25px;
-            right: 10px;
-            transition: right 0.5s;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--text_color);
-            font-weight: bold;
-        }
+#lead a::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;/*靠最左边开始*/
+	border-bottom: 3px solid #009688;/*设置底部边颜色*/
+	width: 0;/*宽度为0，这里的宽度是相对与li的宽度*/
+	height: 80%;/*设置高度使它和li等高*/
+}
+#lead a:hover::before{/*鼠标hover，状态发生改变*/
+	width: 100%;
+	transition: 0.1s all linear;/*设置过度时间*/
+	transition-delay: 0.05s;/*过度延时*/
+}
+
+/*nav*/
+#nav_left{
+	width: 300px;
+	height: 100%;
+}
+#nav_left1{
+	text-align: center;
+}
+#filepicture{
+	border-radius: 50%;
+	margin: auto;
+	margin-top: 50px;
+	width: 100px; /* 设置容器的宽度 */
+	height: 100px; /* 设置容器的高度 */
+	background-image: url("https://s1.ax1x.com/2023/05/25/p9b96Cd.png"); /* 设置背景图像路径 */
+	background-size: 250%; /* 缩放图像以适应容器 */
+	background-repeat: no-repeat; /* 不重复显示背景图像 */
+	background-position: center center; /* 图像从中间开始显示 */
+	transition: transform 1s ease;
+}
+#filepicture:hover{
+	transform: rotate(360deg);
+}
+#link{
+	display: flex;
+	width: 100%;
+	bottom: 0;
+}
+#link div{
+	flex: 1;
+	margin: 10px;
+}
+
+#nav_left3{
+	height: 30%;
+}
+#nav_center{
+	width: 500px;
+	flex: 2;
+}
+#nav_right{
+	width: 300px;
+}
+
+/*图标变蓝*/
+#link a:hover svg path {
+	fill: rgba(171, 122, 255, 0.573);
+}
+
+/*返回顶部图标*/
+#floatingDiv {
+	width: 50px;
+	height: 50px;
+	background-color: var(--div_bg_color_hover);
+	border-radius: 5px;
+	position: fixed;
+	bottom: 135px;
+	right: -100px;
+	transition: right 0.5s;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--text_color);
+	font-weight: bold;
+}
+
+#theme_cg {
+	width: 50px;
+	height: 50px;
+	background-color: var(--div_bg_color_hover);
+	border-radius: 5px;
+	position: fixed;
+	bottom: 80px;
+	right: 10px;
+	transition: right 0.5s;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--text_color);
+	font-weight: bold;
+}
+
+#body_bg {
+	width: 50px;
+	height: 50px;
+	background-color: var(--div_bg_color_hover);
+	border-radius: 5px;
+	position: fixed;
+	bottom: 25px;
+	right: 10px;
+	transition: right 0.5s;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--text_color);
+	font-weight: bold;
+}
