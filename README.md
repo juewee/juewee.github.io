@@ -1,3 +1,1 @@
-# juewee.github.io
-
-## ai网址收藏
+# 个人博客

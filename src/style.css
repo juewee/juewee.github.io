@@ -1,0 +1,29 @@
+html,body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+:root{
+  background-color: var(--bg-color);
+  color: var(--color);
+}
+
+a{
+  color: var(--color);
+  text-decoration: none;
+}
+
+.theme-light {
+  --header-bg-color:#C6E2FF;
+  --hover-bg-color:#E6F7FF;
+  --bg-color:white;
+  --color:black;
+}
+
+.theme-dark {
+  --header-bg-color:#3B3B3B;
+  --bg-color:#2B2B2B;
+  --hover-bg-color:#3b3b3bc2;
+  --color:white;
+}
