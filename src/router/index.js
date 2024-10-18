@@ -1,5 +1,5 @@
 import component from 'element-plus/es/components/tree-select/src/tree-select-option.mjs'
-import { createWebHistory, createRouter } from 'vue-router'
+import { createWebHistory, createRouter,createWebHashHistory } from 'vue-router'
 
 const routes = [
     { path:'/',component:()=>import("@/layout/index.vue")},
@@ -9,7 +9,8 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  // history: createWebHistory(),
+  history:createWebHashHistory(),
   routes,
 })
 
