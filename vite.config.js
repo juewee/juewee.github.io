@@ -1,8 +1,10 @@
 import { defineConfig } from 'vite'
+import { setupBuild } from './build/index'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
 export default defineConfig({
+  build: setupBuild(),
   plugins: [vue()],
   base: './',
   resolve: {
