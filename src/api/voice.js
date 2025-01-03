@@ -1,12 +1,14 @@
 import asiox from 'axios'
 
-export function get_tts(params) {
-    const url = import.meta.env.VITE_APP_TTS_URL
+export function get_tts(data) {
     
     return asiox({
-        url: `http://${url}:9880/tts`,
-        method: 'get',
-        responseType: 'blob',
-        params:params
+        url: "https://infer.acgnai.top/infer/gen",
+        method: 'post',
+        timeout:0,
+        headers:{
+            "content-type": "application/json"
+        },
+        data:data
     })
 }
