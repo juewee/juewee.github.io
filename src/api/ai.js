@@ -4,7 +4,7 @@ export async function callGLMApi(messages) {
     const url = 'https://open.bigmodel.cn/api/paas/v4/chat/completions'; // API 端点
   
     const requestBody = {
-      model: 'glm-4',
+      model: 'glm-4v-flash',
       messages: messages,
     //   max_tokens: 500,
       stream: true
