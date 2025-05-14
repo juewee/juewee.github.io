@@ -3,6 +3,11 @@ html,body{
   width: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 :root{
   background-color: var(--bg-color);
@@ -15,10 +20,10 @@ a{
 }
 
 .theme-light {
-  --header-bg-color:#C6E2FF;
-  --hover-bg-color:#E6F7FF;
-  --bg-color:white;
-  --color:black;
+  --header-bg-color:#A38050;
+  --bg-color:#ECD2A6;
+  --hover-bg-color:#3b3b3bc2;
+  --color:#000;
 }
 
 .theme-dark {

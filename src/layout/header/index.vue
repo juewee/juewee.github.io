@@ -1,5 +1,7 @@
 <template>
-    <span style="font-size: 40px; font-weight:550;">Losheep</span>
+    <span style="font-size: 40px; font-weight:550;display: flex;align-items: center;">
+        <img src="/logo.png" alt="" srcset="" style="width: 64px;height: 64px;margin-right: 8px;">
+        Losheep</span>
     <div class="header-right">
         <!-- 主题切换按钮 -->
         <el-switch v-model="theme" @change="changeTheme" />
