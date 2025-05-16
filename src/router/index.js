@@ -5,6 +5,8 @@ const routes = [
     { path:'/',component:()=>import("@/layout/index.vue")},
     { path:'/tools',component:()=>import("@/views/tools/index.vue")},
     { path:'/test',component:()=>import("@/views/test/index.vue")},
+    { path:'/live2d',component:()=>import("@/views/live2d/index.vue")},
+    { path:'/voice',component:()=>import("@/views/voice/index.vue")},
     //{{...}}
 ]
 
