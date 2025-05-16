@@ -15,9 +15,14 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://infer.acgnai.top', // 目标 API 地址
+        target: 'https://api.uomg.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      },
+      '/api3': {
+        target: 'https://gsv.ai-lab.top', // 目标 API 地址
         changeOrigin: true, // 是否修改 Origin
-        rewrite: (path) => path.replace(/^\/api/, ''), // 去掉 /api 前缀
+        rewrite: (path) => path.replace(/^\/api3/, ''), // 去掉 /api 前缀
       },
     },
   },

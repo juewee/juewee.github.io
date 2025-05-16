@@ -1,0 +1,605 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "Hyacine_V2.moc3",
+		"Textures": [
+			"Hyacine_V2.4096/texture_00.png",
+			"Hyacine_V2.4096/texture_01.png"
+		],
+		"Physics": "Hyacine.physics3.json",
+		"Expressions": [
+			{
+				"Name": "Angry.exp3",
+				"File": "expressions/Angry.exp3.json"
+			},
+			{
+				"Name": "Blushing.exp3",
+				"File": "expressions/Blushing.exp3.json"
+			},
+			{
+				"Name": "f01.exp3",
+				"File": "expressions/f01.exp3.json"
+			},
+			{
+				"Name": "f02.exp3",
+				"File": "expressions/f02.exp3.json"
+			},
+			{
+				"Name": "Sad.exp3",
+				"File": "expressions/Sad.exp3.json"
+			},
+			{
+				"Name": "Shy01.exp3",
+				"File": "expressions/Shy01.exp3.json"
+			},
+			{
+				"Name": "Shy02.exp3",
+				"File": "expressions/Shy02.exp3.json"
+			},
+			{
+				"Name": "Smile.exp3",
+				"File": "expressions/Smile.exp3.json"
+			},
+			{
+				"Name": "Surprised.exp3",
+				"File": "expressions/Surprised.exp3.json"
+			}
+		],
+		"Motions": {
+			"Idle": [
+				{
+					"File": "motions/IDLING_2.motion3.json"
+				},
+				{
+					"File": "motions/IDLING_2_2.motion3.json"
+				},
+				{
+					"File": "motions/IDLING_1.motion3.json"
+				},
+				{
+					"File": "motions/IDLING_1_2.motion3.json"
+				}
+			],
+			"TapArm": [
+				{
+					"File": "motions/A00S0295.motion3.json"
+				},
+				{
+					"File": "motions/A00S0296.motion3.json"
+				},
+				{
+					"File": "motions/A00S0297.motion3.json"
+				},
+				{
+					"File": "motions/A00S0901.motion3.json"
+				},
+				{
+					"File": "motions/A01A0407.motion3.json",
+					"Sound": "voice/Arm01.WAV"
+				},
+				{
+					"File": "motions/A02A0513.motion3.json",
+					"Sound": "voice/Arm02.WAV"
+				},
+				{
+					"File": "motions/A03S0805.motion3.json",
+					"Sound": "voice/Arm03.WAV"
+				}
+			],
+			"TapChest": [
+				{
+					"File": "motions/C00A0267.motion3.json"
+				},
+				{
+					"File": "motions/C00A0297.motion3.json"
+				},
+				{
+					"File": "motions/C01A1387.motion3.json",
+					"Sound": "voice/Chest01.WAV"
+				},
+				{
+					"File": "motions/C02A1401.motion3.json",
+					"Sound": "voice/Chest02.WAV"
+				},
+				{
+					"File": "motions/C02A1607.motion3.json",
+					"Sound": "voice/Chest03.WAV"
+				},
+				{
+					"File": "motions/C03A1683.motion3.json",
+					"Sound": "voice/Chest03.WAV"
+				}
+			],
+			"TapFoot": [
+				{
+					"File": "motions/F00A0277.motion3.json"
+				},
+				{
+					"File": "motions/F01S1097.motion3.json",
+					"Sound": "voice/Foot01.WAV"
+				},
+				{
+					"File": "motions/F02S1243.motion3.json",
+					"Sound": "voice/Foot02.WAV"
+				},
+				{
+					"File": "motions/F03S0704.motion3.json",
+					"Sound": "voice/Foot03.WAV"
+				}
+			],
+			"TapBody": [
+				{
+					"File": "motions/H00S0203.motion3.json"
+				},
+				{
+					"File": "motions/H00S0297.motion3.json"
+				},
+				{
+					"File": "motions/H01S0706.motion3.json",
+					"FadeInTime": 0.5,
+					"FadeOutTime": 0.5,
+					"Sound": "voice/Head01.WAV"
+				},
+				{
+					"File": "motions/H02S1067.motion3.json",
+					"FadeInTime": 0.5,
+					"FadeOutTime": 0.5,
+					"Sound": "voice/Head02.WAV"
+				},
+				{
+					"File": "motions/H02S1197.motion3.json",
+					"FadeInTime": 0.5,
+					"FadeOutTime": 0.5,
+					"Sound": "voice/Head03.WAV"
+				},
+				{
+					"File": "motions/H03S1604.motion3.json"
+				}
+			],
+			"TapHead": [
+				{
+					"File": "motions/H00S0203.motion3.json"
+				},
+				{
+					"File": "motions/H00S0297.motion3.json"
+				},
+				{
+					"File": "motions/H01S0706.motion3.json",
+					"Sound": "voice/Head01.WAV"
+				},
+				{
+					"File": "motions/H02S1067.motion3.json",
+					"Sound": "voice/Head02.WAV"
+				},
+				{
+					"File": "motions/H02S1197.motion3.json",
+					"Sound": "voice/Head03.WAV"
+				},
+				{
+					"File": "motions/H03S1604.motion3.json"
+				}
+			],
+			"TapLeg": [
+				{
+					"File": "motions/L00A0297.motion3.json"
+				},
+				{
+					"File": "motions/L01A1008.motion3.json",
+					"Sound": "voice/Leg01.WAV"
+				},
+				{
+					"File": "motions/L02A0473.motion3.json",
+					"Sound": "voice/Leg02.WAV"
+				},
+				{
+					"File": "motions/L03A0833.motion3.json",
+					"Sound": "voice/Leg03.WAV"
+				}
+			],
+			"TapRear": [
+				{
+					"File": "motions/R00A0257.motion3.json"
+				},
+				{
+					"File": "motions/R00A0267.motion3.json"
+				},
+				{
+					"File": "motions/R00A0297.motion3.json"
+				},
+				{
+					"File": "motions/R01A1957.motion3.json",
+					"Sound": "voice/Rear01.WAV"
+				},
+				{
+					"File": "motions/R02A1673.motion3.json",
+					"Sound": "voice/Rear02.WAV"
+				},
+				{
+					"File": "motions/R03S0327.motion3.json",
+					"Sound": "voice/Rear03.WAV"
+				}
+			],
+			"TapStomach": [
+				{
+					"File": "motions/S00A0297.motion3.json"
+				},
+				{
+					"File": "motions/S00S0203.motion3.json"
+				},
+				{
+					"File": "motions/S01S0307.motion3.json",
+					"Sound": "voice/Stomach01.WAV"
+				},
+				{
+					"File": "motions/S02S1167.motion3.json",
+					"Sound": "voice/Stomach02.WAV"
+				},
+				{
+					"File": "motions/S03S0401.motion3.json",
+					"Sound": "voice/Stomach03.WAV"
+				}
+			],
+			"TapThigh": [
+				{
+					"File": "motions/T00A0296.motion3.json"
+				},
+				{
+					"File": "motions/T00A0297.motion3.json"
+				},
+				{
+					"File": "motions/T01A1377.motion3.json",
+					"Sound": "voice/Thigh01.WAV"
+				},
+				{
+					"File": "motions/T02A1201.motion3.json",
+					"Sound": "voice/Thigh02.WAV"
+				},
+				{
+					"File": "motions/T03A1100.motion3.json",
+					"Sound": "voice/Thigh03.WAV"
+				}
+			],
+			"TapFace": []
+		}
+	},
+	"Controllers": {
+		"ParamHit": {},
+		"ParamLoop": {},
+		"KeyTrigger": {},
+		"ParamTrigger": {},
+		"AreaTrigger": {
+			"Enabled": true
+		},
+		"HandTrigger": {},
+		"EyeBlink": {
+			"MinInterval": 500,
+			"MaxInterval": 6000,
+			"Enabled": true
+		},
+		"LipSync": {
+			"Gain": 5.0,
+			"Enabled": true
+		},
+		"MouseTracking": {
+			"SmoothTime": 0.15,
+			"Enabled": true
+		},
+		"AutoBreath": {
+			"Enabled": true
+		},
+		"ExtraMotion": {
+			"Enabled": true
+		},
+		"Accelerometer": {
+			"Enabled": true
+		},
+		"Microphone": {},
+		"Transform": {},
+		"FaceTracking": {
+			"Enabled": true
+		},
+		"HandTracking": {},
+		"ParamValue": {
+			"Items": [
+				{
+					"Name": "PillowSwitch",
+					"Ids": [
+						"ParamPillowSwitch"
+					],
+					"KeyValues": [
+						{
+							"Key": "0",
+							"Value": 0.0
+						},
+						{
+							"Key": "1",
+							"Value": 1.0
+						},
+						{
+							"Key": "2",
+							"Value": 2.0
+						},
+						{
+							"Key": "3",
+							"Value": 3.0
+						}
+					]
+				},
+				{
+					"Name": "BedSwitch",
+					"Ids": [
+						"ParamBackground"
+					],
+					"KeyValues": [
+						{
+							"Key": "0",
+							"Value": 0.0
+						},
+						{
+							"Key": "1",
+							"Value": 1.0
+						},
+						{
+							"Key": "2",
+							"Value": 2.0
+						}
+					]
+				},
+				{
+					"Name": "BedColor",
+					"Ids": [
+						"ParamBedColor"
+					],
+					"KeyValues": [
+						{
+							"Key": "0",
+							"Value": 0.0
+						},
+						{
+							"Key": "1",
+							"Value": 1.0
+						},
+						{
+							"Key": "2",
+							"Value": 2.0
+						},
+						{
+							"Key": "3",
+							"Value": 3.0
+						},
+						{
+							"Key": "4",
+							"Value": 4.0
+						},
+						{
+							"Key": "5",
+							"Value": 5.0
+						}
+					]
+				},
+				{
+					"Name": "PillowColor",
+					"Ids": [
+						"ParamPillowColor"
+					],
+					"KeyValues": [
+						{
+							"Key": "0",
+							"Value": 0.0
+						},
+						{
+							"Key": "1",
+							"Value": 1.0
+						},
+						{
+							"Key": "2",
+							"Value": 2.0
+						},
+						{
+							"Key": "3",
+							"Value": 3.0
+						},
+						{
+							"Key": "4",
+							"Value": 4.0
+						},
+						{
+							"Key": "5",
+							"Value": 5.0
+						}
+					]
+				},
+				{
+					"Name": "HairColor",
+					"Ids": [
+						"ParamHairColor"
+					],
+					"KeyValues": [
+						{
+							"Key": "0",
+							"Value": 0.0
+						},
+						{
+							"Key": "1",
+							"Value": 1.0
+						},
+						{
+							"Key": "2",
+							"Value": 2.0
+						},
+						{
+							"Key": "3",
+							"Value": 3.0
+						}
+					]
+				},
+				{
+					"Name": "HairOrnmt",
+					"Ids": [
+						"ParamHairornamentSwitch"
+					],
+					"KeyValues": [
+						{
+							"Key": "0",
+							"Value": 0.0
+						},
+						{
+							"Key": "1",
+							"Value": 1.0
+						},
+						{
+							"Key": "2",
+							"Value": 2.0
+						},
+						{
+							"Key": "3",
+							"Value": 3.0
+						},
+						{
+							"Key": "4",
+							"Value": 4.0
+						},
+						{
+							"Key": "5",
+							"Value": 5.0
+						}
+					]
+				},
+				{
+					"Name": "HairSwitch",
+					"Ids": [
+						"ParamHairSwitch"
+					],
+					"KeyValues": [
+						{
+							"Key": "0",
+							"Value": 0.0
+						},
+						{
+							"Key": "1",
+							"Value": 1.0
+						}
+					]
+				},
+				{
+					"Name": "CheekSwitch",
+					"Ids": [
+						"ParamCheek"
+					],
+					"KeyValues": [
+						{
+							"Key": "0",
+							"Value": 0.0
+						},
+						{
+							"Key": "1",
+							"Value": 0.5
+						},
+						{
+							"Key": "2",
+							"Value": 1.0
+						}
+					]
+				},
+				{
+					"Name": "ClothSwitch",
+					"Ids": [
+						"ParamClothSwitch"
+					],
+					"KeyValues": [
+						{
+							"Key": "0",
+							"Value": 0.0
+						},
+						{
+							"Key": "1",
+							"Value": 1.0
+						}
+					]
+				},
+				{
+					"Name": "LegSwitch",
+					"Ids": [
+						"ParamLegSwitch"
+					],
+					"KeyValues": [
+						{
+							"Key": "0",
+							"Value": 0.0
+						},
+						{
+							"Key": "1",
+							"Value": 1.0
+						},
+						{
+							"Key": "2",
+							"Value": 2.0
+						}
+					]
+				},
+				{
+					"Name": "PhoneSwitch",
+					"Ids": [
+						"ParamPhoneSwitch"
+					],
+					"KeyValues": [
+						{
+							"Key": "0",
+							"Value": 0.0
+						},
+						{
+							"Key": "1",
+							"Value": 1.0
+						}
+					]
+				}
+			],
+			"Enabled": true
+		},
+		"PartOpacity": {},
+		"ArtmeshOpacity": {},
+		"ArtmeshColor": {},
+		"ArtmeshCulling": {
+			"DefaultMode": 0
+		},
+		"IntimacySystem": {}
+	},
+	"HitAreas": [
+		{
+			"Id": "HitAreaFoot",
+			"Name": "Foot"
+		},
+		{
+			"Id": "HitAreaLeg",
+			"Name": "Leg"
+		},
+		{
+			"Id": "HitAreaRear",
+			"Name": "Rear"
+		},
+		{
+			"Id": "HitAreaFace",
+			"Name": "Face"
+		},
+		{
+			"Id": "HitAreaArm",
+			"Name": "Arm"
+		},
+		{
+			"Id": "HitAreaThigh",
+			"Name": "Thigh"
+		},
+		{
+			"Id": "HitAreaBody",
+			"Name": "Body"
+		},
+		{
+			"Id": "HitAreaChest",
+			"Name": "Chest"
+		},
+		{
+			"Id": "HitAreaHead",
+			"Name": "Head"
+		}
+	]
+}
