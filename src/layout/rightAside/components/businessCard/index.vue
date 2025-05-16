@@ -4,7 +4,7 @@
         <div>Losheep</div>
         <div>好好学习天天向上</div>
         <div style="display: flex; justify-content: space-around; width: 100%">
-            <div class="link">
+            <div class="link" @click="openGithub">
                 <svg t="1689827288646" class="icon" viewBox="0 0 1024 1024" version="1.1"
                     xmlns="http://www.w3.org/2000/svg" p-id="2273" width="50" height="50">
                     <path
@@ -13,7 +13,7 @@
                 </svg>
 
             </div>
-            <div class="link">
+            <div class="link" @click="sendEmail">
                 <svg t="1689827675504" class="icon" viewBox="0 0 1024 1024" version="1.1"
                     xmlns="http://www.w3.org/2000/svg" p-id="2964" width="50" height="50">
                     <path
@@ -22,7 +22,7 @@
                 </svg>
 
             </div>
-            <div class="link">
+            <div class="link" @click="openQQ">
                 <svg t="1689827918678" class="icon" viewBox="0 0 1024 1024" version="1.1"
                     xmlns="http://www.w3.org/2000/svg" p-id="2594" width="50" height="50">
                     <path
@@ -36,7 +36,42 @@
 </template>
 
 <script setup>
+const openGithub = () => {
+  window.open('https://github.com/juewee', '_blank')
+}
 
+const sendEmail = () => {
+  window.location.href = 'mailto:losheep@qq.com'
+}
+const openQQ = () => {
+  const qqNumber = '2651237933';
+  
+  // 创建一个临时的textarea元素
+  const textarea = document.createElement('textarea');
+  textarea.value = qqNumber;
+  textarea.style.position = 'fixed';  // 防止页面滚动
+  document.body.appendChild(textarea);
+  textarea.select();
+  
+  try {
+    // 尝试使用更兼容的execCommand方法
+    const successful = document.execCommand('copy');
+    if(successful) {
+      alert('QQ号已复制到剪贴板');
+    } else {
+      throw new Error('复制失败');
+    }
+  } catch (err) {
+    alert('复制失败，请手动复制QQ号: ' + qqNumber);
+  } finally {
+    document.body.removeChild(textarea);
+  }
+  
+  // 作为备用，仍然尝试使用Clipboard API
+  if(navigator.clipboard) {
+    navigator.clipboard.writeText(qqNumber).catch(() => {});
+  }
+}
 </script>
 
 <style lang="scss" scoped>

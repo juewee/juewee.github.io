@@ -9,9 +9,9 @@
             <!-- 主要内容 -->
             <el-main @scroll="scrollEvent">
                 <!-- 头部图标 -->
-                <div class="headerIcon">
+                <div class="headerIcon ">
                     <div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
-                        <div class="pic"></div>
+                        <div class="pic "></div>
                         <span style="font-size: 40px; font-weight:550; margin-top: 20px;">Losheep</span>
                         <!-- 文字动画容器 -->
                         <div class="text-animation" ref="textAnimationContainer"></div>
